@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    }
+    
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0px;
+    }
+
+header{
+    text-align: center;
+    padding: 10px;
+}    
+    
+.calenderMain{
+    margin: 10px 10px 10px;
+    border: 2px solid black;
+    border-radius: 7px; 
+    
+}
+
+.todoContainerList{
+    width: 400px;
+    margin-top: 10px;
+    
+}
+
+#dailyTasks{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 285px;
+}
+
+
+ .calenderContainer{
+     margin-top: 10px;
+     margin-left: 20px;
+     flex: 1 1 0px;
+ }
+
