@@ -1,11 +1,32 @@
 window.addEventListener('load', function(){
+
+  // Event
+  document.getElementById("prevMonth").addEventListener("click", thePrevMonth);
+  document.getElementById("nextMonth").addEventListener("click", theNextMonth);
+
   let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  const d = new Date();
-  let month = months[d.getMonth()];
-  document.getElementById("months").innerHTML = month;
-
-
   const daysContainer = document.querySelector('#days-container');
+
+  let dateState = new Date(); 
+  getMonth();
+
+  function thePrevMonth (){
+    dateState.setMonth(dateState.getMonth() - 1);
+    getMonth()
+  }
+
+  function theNextMonth (){
+    dateState.setMonth(dateState.getMonth() + 1);
+    getMonth()
+}
+
+  function getMonth() {
+    let prevMonth = months[dateState.getMonth()];
+    document.getElementById('months').innerText = prevMonth;
+    renderContainer(dateState);
+  }
+
+
 
   function renderContainer(date){
     const year = date.getFullYear();
@@ -18,12 +39,12 @@ window.addEventListener('load', function(){
     }else{
       noOfPrevDays = firstDayIndex - 1;
     }
-    console.log(noOfPrevDays)
+    
     const noOfDaysInMonth = new Date(year,month+1,0).getDate();
     const noOfPrevMonth = new Date(year,month,0).getDate();
     const noOfRows = Math.ceil((noOfPrevDays + noOfDaysInMonth)/7);
     const noOfNextDays = noOfRows * 7 -  noOfPrevDays - noOfDaysInMonth;
-    console.log(noOfPrevMonth)
+    
 
     daysContainer.innerHTML = '';
 
@@ -44,6 +65,5 @@ window.addEventListener('load', function(){
     }
    
   }
-  renderContainer(new Date());
 
 });
