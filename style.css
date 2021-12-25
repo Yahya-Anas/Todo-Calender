@@ -10,6 +10,7 @@ main {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0px;
+    height: 70%;
     }
 
 header{
@@ -17,29 +18,56 @@ header{
     padding: 10px;
 }    
     
-.calenderMain{
+.calender-main{
     margin: 10px 10px 10px;
     border: 2px solid black;
     border-radius: 7px; 
     
 }
 
-.todoContainerList{
+.todo-container-list{
     width: 400px;
     margin-top: 10px;
     
 }
 
-#dailyTasks{
+#daily-tasks{
     margin-top: 5px;
     margin-left: 5px;
     width: 285px;
 }
 
 
- .calenderContainer{
+ .calender-container{
      margin-top: 10px;
      margin-left: 20px;
      flex: 1 1 0px;
  }
 
+ .calender-days{
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .calnder-month{
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 40px;
+ }
+
+ #days-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+
+ .day-container {
+	text-align: center;
+	line-height: 30px;
+    
+}
+
+.day-name{
+    flex: 1 1 auto;
+	text-align: center;
+}

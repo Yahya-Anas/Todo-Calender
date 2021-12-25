@@ -8,28 +8,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
     <title>Todo Calender</title>
 </head>
 <body>
-    <header class="calenderMain" style="font-family: 'Twinkle Star', cursive; font-size: 60px;">Calender</header>
+    <header class="calender-main" style="font-family: 'Twinkle Star', cursive; font-size: 60px;">Calender</header>
     <main>
-        <aside class="todoContainerList calenderMain">
-            <textarea id="dailyTasks" rows="5" ></textarea>
+        <aside class="todo-container-list calender-main">
+            <textarea id="daily-tasks" rows="5" ></textarea>
 
         </aside>
-        <table class="calenderContainer calenderMain">
-            <thead>
-                <tr>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                    <th>Sun</th>
-                </tr>
-            </thead>
-        </table>
+
+        <section class="calender-container calender-main">
+           
+                <div class="calnder-month">
+                    <div><button>Back</button></div>
+                    <div id="months"></div>
+                    <div><button>Next</button></div>
+                </div>
+
+                <div class="calender-days">
+                    <div class="day-name">Mon</div>
+                    <div class="day-name">Tue</div>
+                    <div class="day-name">Wed</div>
+                    <div class="day-name">Thu</div>
+                    <div class="day-name">Fri</div>
+                    <div class="day-name">Sat</div>
+                    <div class="day-name">Sun</div>
+                </div>
+
+                <div id="days-container"></div>
+            
+        </section>
     </main>
+    
+    
 </body>
 </html>
