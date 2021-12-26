@@ -6,6 +6,7 @@ window.addEventListener('load', function(){
 
   let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const daysContainer = document.querySelector('#days-container');
+  
 
   let dateState = new Date(); 
   getMonth();
@@ -21,11 +22,11 @@ window.addEventListener('load', function(){
 }
 
   function getMonth() {
-    let prevMonth = months[dateState.getMonth()];
-    document.getElementById('months').innerText = prevMonth;
+    let isMonth = months[dateState.getMonth()];
+    document.getElementById('months').innerText = isMonth;
     renderContainer(dateState);
   }
-
+  
 
 
   function renderContainer(date){
