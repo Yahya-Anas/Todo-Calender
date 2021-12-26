@@ -74,19 +74,19 @@ header{
 
  .day-container {
 	text-align: center;
-	line-height: 30px;
     width: calc(100% / 7);
-    height: 141px;  
+    height: 80px;  
     font-size: 18px;  
-    padding-top: 50px;
-    
+    padding-top: 24px;
     
 }
- .day-container:hover{
-    border: #e1e1e1;
-    border: 1px solid #d0d0d0;
- }
 
+.day-container:hover{
+    box-sizing: border-box;
+    background: #e1e1e1;
+   border: 1px solid #d0d0d0;
+   box-shadow: 1px 0.5px;
+}
 
 .month-contaier{
     text-align: center;
