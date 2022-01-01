@@ -1,3 +1,7 @@
+@import url('https://css.gg/chevron-right.css');
+@import url('https://css.gg/chevron-left.css');
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -14,11 +18,61 @@ main {
 header{
     text-align: center;
     padding: 10px;
-}   
+}  
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modal-open;
+    animation-duration: 1s;
+}
+
+@keyframes modal-open{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.close-btn{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.close-btn:hover, .close-btn:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #months{
     text-transform: uppercase;
     font-size: 30px;
+    margin-right: 30px;
+}
+
+#year{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: red;
+}
+
+.month-and-year-header{
+    display: flex;
 }
 
 #holiday{
@@ -86,6 +140,7 @@ header{
     background: #e1e1e1;
    border: 1px solid #d0d0d0;
    box-shadow: 1px 0.5px;
+   cursor: pointer;
 }
 
 .month-contaier{
@@ -96,3 +151,20 @@ header{
     flex: 1 1 auto;
 	text-align: center;
 }
+
+#the-day-{
+    box-sizing: border-box;
+    background: #e1e1e1;
+   border: 1px solid #d0d0d0;
+   box-shadow: 1px 0.5px;
+}
+
+.gg-chevron-left{
+    cursor: pointer;
+}
+
+.gg-chevron-right{
+    cursor: pointer;
+}
+
+
