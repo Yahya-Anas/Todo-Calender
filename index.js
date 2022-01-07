@@ -23,15 +23,26 @@ window.addEventListener('load', function(){
     modal.style.display = 'none';
   }
 
-  function outSideClick(e){
-    if(e.target == modal){
+  function outSideClick(event){
+    if(event.target == modal){
       closeModal();
     }
   }
 
 
+  //Get Picker field value
+  
 
+  function getSelectormonth(){
+    const pickerDate = document.getElementById("picker-date");
 
+    if(pickerDate){
+      const currentDate = new Date()
+      pickerDate.value = currentDate.toLocaleDateString('en-CA');
+    }
+
+    
+  }
 
   // Event
   
@@ -40,6 +51,7 @@ window.addEventListener('load', function(){
 
   let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const daysContainer = document.querySelector('#days-container');
+  
   //let noOfMonth= months.length;
   
   
@@ -61,7 +73,6 @@ window.addEventListener('load', function(){
   function getMonth() {
     let isMonth = months[dateState.getMonth()];
     document.getElementById('months').innerText = isMonth;
-    console.log(isMonth);
     renderContainer(dateState);
     getYear()
   } 
@@ -69,16 +80,16 @@ window.addEventListener('load', function(){
   function getYear(){
     let isYear = dateState.getFullYear();
     document.getElementById('year').innerText =  isYear
-    console.log(isYear);
     renderContainer(dateState);
   }
 
-  function currentDayColro(){
+  function currentDayColor(){
     const currentDate = new Date();
-    if(dateState.getFullYear() !== currentDate.getFullYear() && dateState.getMonth() !== currentDate.getMonth()){
-      return;
-     }
-      document.getElementById('the-day-' + currentDate.getDate() ).style.color = 'red';
+    if(dateState.getFullYear() !== currentDate.getFullYear() || dateState.getMonth() !== currentDate.getMonth()){
+       return;
+     
+    }document.getElementById('the-day-' + currentDate.getDate()).style.color = 'red';
+    
   }
 
   
@@ -121,9 +132,8 @@ window.addEventListener('load', function(){
 			daysContainer.appendChild(day);
 
     } 
-    currentDayColro()
-  
-   
+    currentDayColor()
+    getSelectormonth()
    
   }
 

@@ -138,9 +138,10 @@ header{
 .day-container:hover{
     box-sizing: border-box;
     background: #e1e1e1;
-   border: 1px solid #d0d0d0;
-   box-shadow: 1px 0.5px;
-   cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 0.5px;
+    cursor: pointer;   
+    background-color: #bbb;
 }
 
 .month-contaier{
@@ -155,8 +156,8 @@ header{
 #the-day-{
     box-sizing: border-box;
     background: #e1e1e1;
-   border: 1px solid #d0d0d0;
-   box-shadow: 1px 0.5px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 1px 0.5px;
 }
 
 .gg-chevron-left{
@@ -166,5 +167,6 @@ header{
 .gg-chevron-right{
     cursor: pointer;
 }
+
 
 
