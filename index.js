@@ -5,13 +5,14 @@ window.addEventListener('load', function(){
   const modal = document.getElementById('simple-modal');
 
   // Get Open Modal
-  const modalBtn = document.getElementById('days-container');
-
+  
+  
   // Get Close Modal
   const closeModalBtn = document.getElementsByClassName('close-btn')[0];
 
   // Modal Event
-  modalBtn.addEventListener('click', openModal);
+  
+ 
   closeModalBtn.addEventListener('click', closeModal);
   window.addEventListener('click', outSideClick);
 
@@ -121,17 +122,24 @@ window.addEventListener('load', function(){
       day.id = 'the-day-' + i ;
 
       if (i < 1) {
-				day.innerText = i + noOfPrevMonth;
+				day.innerHTML = '<div class="day">' + (i + noOfPrevMonth) + '</div>';
 
 			} else if (i > noOfDaysInMonth) {
-				day.innerText = i - noOfDaysInMonth;
-        
+        day.innerHTML = '<div class="day">' + (i - noOfDaysInMonth) + '</div>';
+
 			} else {
-				day.innerText = i;
+        day.classList.add("active");
+        day.innerHTML = '<div class="day">' + i + '</div>';
+
 			}
 			daysContainer.appendChild(day);
-
     } 
+
+     const modalBtn = document.querySelectorAll('.day-container.active');
+
+      for(i = 0; i < modalBtn.length; i++){
+          modalBtn [i].addEventListener('click', openModal);        
+      }
     currentDayColor()
     getSelectormonth()
    

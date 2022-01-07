@@ -126,22 +126,34 @@ header{
     
  }
 
+ 
+
  .day-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
 	text-align: center;
     width: calc(100% / 7);
     height: 80px;  
     font-size: 18px;  
     padding-top: 24px;
+    color: gray;
     
 }
 
-.day-container:hover{
+.day-container.active {
+   color: black;
+}
+
+.day-container.active .day:hover {
     box-sizing: border-box;
     background: #e1e1e1;
     border-radius: 50%;
     box-shadow: 1px 0.5px;
     cursor: pointer;   
-    background-color: #bbb;
+    width: 27px;
+    height: 27px;
+  
 }
 
 .month-contaier{
